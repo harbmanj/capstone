@@ -15,9 +15,11 @@ The Target variable was mapped such that "Malignant" = 1, and "Benign" = 0
 
 Standard scalar was applied to all numeric features. 
 
-I used a test/train split for an initial investigation, and then 5-fold Cross Validation for tuning the hyper-parameters of the models 
+I used a test/train split for an initial investigation, and then 5-fold Cross Validation for tuning the hyper-parameters of the models. 
 
-I also explored Polynomial Feature combinations to give the model more expressive power. The summary is that polynomial combination of degree 2 outperformed the raw data, and polynomial combinations of degree 3 showed some signs of over-fiitting.
+I used both Gaussian Mixture Modelling and DBSCAN to add clustering to the dataset.
+
+I also explored Polynomial Feature combinations to give the model more expressive power. The summary is that polynomial combination of degree 2 outperformed the raw data, and polynomial combinations of degree 3 showed some signs of over-fiitting, particularly in the D-tree model. 
 
 
 ## Evaluation
@@ -34,15 +36,6 @@ This project reviews 4 algorithms:
 - Logistic regression
 - Decision trees
 - Support vector machines (SMV)
-
-The Initial Analysis was to run a simple version of these models without any tuning. This produced the following results:
-- Accuracy of SVC: 0.9078
-- Accuracy of LogisticRegression: 0.9029
-- Accuracy of KNeighborsClassifier: 0.8993
-- Accuracy of DecisionTreeClassifier: 0.8823
-
-The performance here is fairly tightly grouped, with SVC performing the best. 
-
 
 ## Tuning
 
