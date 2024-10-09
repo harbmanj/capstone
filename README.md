@@ -65,12 +65,14 @@ Here is a chart
 ![Feature Importance](Images/LogReg_feature_importance.png)
 
 The RandomForest model identified different top features, which are visible below
-'
+![Feature Importance](Images/Dtree_Features.png)
 
+RandomForest Identifies a more diverse set of points, all linear combinations. 
 
 ## Conclusion
 - The best trade off in Model Performance was the Degree = 2 PolynomialFeatures without clustering labels applied. This model had a Mean Recall from 5-Fold CV of 0.9623. This number would likely need to be improved in order to deploy this model in a real-world medical context.
-- Logistic Regression performed just as well in Recall department, but slightly worse in accuracy. However, Logistic Regression is a much easier to interpret model, gicing us clear feature scores. It's very clear from the top 10 feature values on display above that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model would be superior choice.
+  
+- Logistic Regression and RandromForest performed just as well in Recall department, but slightly worse in accuracy. However, Logistic Regression is a much easier to interpret model, giving us clear feature scores. It's very clear from the top 10 feature values on display above that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model Or RandomForest may be superior choice.
   
 
 ## Possible Continuations
