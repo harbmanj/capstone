@@ -72,12 +72,13 @@ RandomForest Identifies a more diverse set of points, all linear combinations.
 ## Conclusion
 - The best trade off in Model Performance was the Degree = 2 PolynomialFeatures without clustering labels applied. This model had a Mean Recall from 5-Fold CV of 0.9623. This number would likely need to be improved in order to deploy this model in a real-world medical context.
   
-- Logistic Regression and RandromForest performed just as well in Recall department, but slightly worse in accuracy. However, Logistic Regression is a much easier to interpret model, giving us clear feature scores. It's very clear from the top 10 feature values on display above that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model Or RandomForest may be superior choice.
+- Logistic Regression and RandromForest performed just as well in Recall department, but slightly worse in accuracy. These models are much easier to interpret, giving us legible feature scores. It's very clear from the top 10 feature values for the Logistic model  that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model Or RandomForest may be superior choice.
   
 
 ## Possible Continuations
 - I was surprised and disappointed that I was unable to use clustering to improve the model performance. Theoretically this should be possible. Additional experimentation with hyper parameters, as well as potentially reducing the dimensionality could yield valuable results 
 - The biggest flaw in this dataset was simply its size. With targets of recall so high for the realworld application, It's hard to imaging exceeding 99% accuracy without a larger dataset.
 - Ensemble Techniques like XGBoost, Gradient Boosting Machines, or Random Forest might help with further reducing False Negatives
-- Expanding the ParamGrid to search a broader space for potentially more optimal hyper-perameters. 
+- Expanding the ParamGrid to search a broader space for potentially more optimal hyper-perameters.
+- Additional work to reduce or remove some features could create an opportunity to reduce the cost or time of testing required to detect cancer. At this point, my model is not powerful enough to provide such insights. 
 
