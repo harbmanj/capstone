@@ -65,8 +65,9 @@ Here is a chart
 
 
 ## Conclusion
-- The best trade off in Model Performance was the Degree = 2 PolynomialFeatures without clustering labels applied. This model had a Mean Recall from 5-Fold CV of 0.9623. This number would likely need to be improved in order to
-- Logistic Regression performed just as well in Recall department, but slightly worse in accuracy. However, Logistic Regression is a much easier to interpret model, gicing us clear feature scores. It's very clear from the top 10 feature values on display above that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model would be superios. 
+- The best trade off in Model Performance was the Degree = 2 PolynomialFeatures without clustering labels applied. This model had a Mean Recall from 5-Fold CV of 0.9623. This number would likely need to be improved in order to deploy this model in a real-world medical context.
+- Logistic Regression performed just as well in Recall department, but slightly worse in accuracy. However, Logistic Regression is a much easier to interpret model, gicing us clear feature scores. It's very clear from the top 10 feature values on display above that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model would be superior choice.
+  
 
 ## Possible Continuations
 - I was surprised and disappointed that I was unable to use clustering to improve the model performance. Theoretically this should be possible. Additional experimentation with hyper parameters, as well as potentially reducing the dimensionality could yield valuable results 
