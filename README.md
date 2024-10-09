@@ -54,10 +54,7 @@ For this application, there is not a high cost for either flase positive or fals
 
 Many more detailed Confusion Matrices are availble in the analysis Notebook, here we only need consider best performing model: 
 
-![Confusion Matrix](Images/DTree_Confusion.png)
-![Confusion Matrix](Images/KN_Confusion.png)
-![Confusion Matrix](Images/SVC_Confusion.png)
-![Confusion Matrix](Images/LogReg_Confusion.png)
+![Confusion Matrix](Images/Confusion_matrices.png)
 
 ## Feature Importance
 Although the strictly best model (SMV) does not have an easy way to view feature importance. LogisticRegression performed just as well on Recall (our top metric) and comparably on accuracy, with the significant added benefit of being able to interpret top features. This model demonstrates that the column texture_worst is the most important individual measurement, appearing both by itself and in combination with many other features. 
