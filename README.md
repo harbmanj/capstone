@@ -41,12 +41,14 @@ This project considers 4 algorithms:
 
 After completing the initial analysis to baseline model performance, I ran a GridSearch to further refine these models and find the optimal hyper parameters. The details of the optimal weights are available in the Notebook, but here are the highlights: 
 
-- Best cross-validated accuracy for LogisticRegression: 0.9141
-- Best cross-validated accuracy for SVC: 0.9104
-- Best cross-validated accuracy for DecisionTreeClassifier: 0.9056
-- Best cross-validated accuracy for KNeighborsClassifier: 0.9022
+The best performing Combinations of Features was Degree 2 PolyFeatures without including Clustering.This organization produced the following recall
 
-While all of the models improved, LogisticRegression overtook SVC for the top-spot.
+- SVM - Mean Recall from 5-Fold CV: 0.9623
+- Random Forest - Mean Recall from 5-Fold CV: 0.9625
+- Logistic Regression - Mean Recall from 5-Fold CV: 0.9575
+- KNeighborsClassifier - Mean Recall from 5-Fold CV: 0.9386
+
+SVM outperformed the other best approaches by having a higher accuracy ( Lower False Positive rate) which is a secondary metric to compare these classifiers.
 
 ## Confusion Matrices
 
@@ -57,11 +59,13 @@ Many more detailed Confusion Matrices are availble in the analysis Notebook, her
 ![Confusion Matrix](Images/Confusion_matrices.png)
 
 ## Feature Importance
-Although the strictly best model (SMV) does not have an easy way to view feature importance. LogisticRegression performed just as well on Recall (our top metric) and comparably on accuracy, with the significant added benefit of being able to interpret top features. This model demonstrates that the column texture_worst is the most important individual measurement, appearing both by itself and in combination with many other features. 
+Although the strictly best model (SMV) does not have an easy way to view feature importance. LogisticRegression performed nearly as well on Recall (our top metric) and comparably on accuracy, with the significant added benefit of being able to interpret top features. This model demonstrates that the column texture_worst is the most important individual measurement, appearing both by itself and in combination with many other features. 
 
 Here is a chart
 ![Feature Importance](Images/LogReg_feature_importance.png)
 
+The RandomForest model identified different top features, which are visible below
+'
 
 
 ## Conclusion
