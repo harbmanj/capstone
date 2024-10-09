@@ -1,5 +1,5 @@
 # Capstone
-A hands-on project to comparing the performance of the following classifiers: k-nearest neighbors, logistic regression, decision trees, and support vector machines. This is the Capstone project for the UC Berkeley AI/ML Professional Certificate.
+A hands-on project to predicting whether a tumor is Malignant or Benign. I compare the performance of the following classifiers: k-nearest neighbors, logistic regression, decision trees, and support vector machines. I also explore potential Clustering techniques. This is the Capstone project for the UC Berkeley AI/ML Professional Certificate.
 
 Detailed Analysis can be found in the Jupyter notebook
 
