@@ -8,7 +8,7 @@ The data is sourced from  kaggle: https://www.kaggle.com/datasets/uciml/breast-c
 
 The Zip file is linked in the "Data" folder of this project
 
-The classification goal is to predict whether a tumor is Malignant from a series of measurements taken 
+The classification goal is to predict whether a tumor is Malignant from a series of numeric measurements.
 
 ## Processing
 The Target variable was mapped such that "Malignant" = 1, and "Benign" = 0
@@ -31,7 +31,7 @@ Precision: This metric focuses on how accurate our model's positive predictions 
 In medical diagnostics, recall is the priority. Minimizing Type II errors is critical because the cost of missing a malignant tumor is much higher than the cost of a false alarm. A model with high recall ensures that nearly all true cases are flagged for further investigation, reducing the risk of undiagnosed or untreated cancer. Therefore, for our diagnostic model, it is strategically more valuable to optimize for recall, even at the expense of some precision, to ensure that we catch as many true malignant cases as possible.
 
 ## Algorithms
-This project reviews 4 algorithms:
+This project considers 4 algorithms:
 - K-nearest neighbors
 - Logistic regression
 - Decision trees
@@ -57,8 +57,7 @@ For this application, there is not a high cost for either flase positive or fals
 ![Confusion Matrix](Images/LogReg_Confusion.png)
 
 ## Feature Importance
-Interpretting the Feature Importance of the Logistic Regression model can be tricky. Here are the outputs for the top 10 most impactful features: 
-
+Although the strictly best model (SMV) does not have an easy way to view feature importance. LogisticRegression performed just as well on Recall (our top metric) and comparably on accuracy, with the significant added benefit of being able to interpret top features. This model 
 
 Here is a chart
 ![Feature Importance](Images/LinReg_Feature_Importance.png)
