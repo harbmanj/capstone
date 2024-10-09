@@ -52,7 +52,7 @@ SVM outperformed the other best approaches by having a higher accuracy ( Lower F
 
 ## Confusion Matrices
 
-For this application, there is not a high cost for either flase positive or false negatives. However, it is still interesting to check the confusion matrices. It could be possible for two models with comparable accuracies to present very different error types. On marginal calls like this one (91.4% accuracy for LogisticRegression and 91.0% accuracy for SVC), business considerations might prefer one type of error over the other. For example, if we were concerned about maximing the productivity of our calls, we might be willing to take the trade of slightly lower overall accuracy for slightly higher precision. Conversely, if we had a limited list of potential customers to call, we might be more concerned about over-looking some "yes" responses and prefer higher recall.
+As mentioned above, we are primarily concerned not with overall accuracy but with Minimizing the False Negative detections. In the Confusion Matrices below, "FN" is in the bottom left corner of each plot, showing the number of instances that were Malignant but mis-classified as Benign.
 
 Many more detailed Confusion Matrices are availble in the analysis Notebook, here we only need consider best performing model: 
 
