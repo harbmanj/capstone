@@ -19,7 +19,7 @@ I used a test/train split for an initial investigation, and then 5-fold Cross Va
 
 I used both Gaussian Mixture Modelling and DBSCAN to add clustering to the dataset.
 
-I also explored Polynomial Feature combinations to give the model more expressive power. The summary is that polynomial combination of degree 2 outperformed the raw data, and polynomial combinations of degree 3 showed some signs of over-fiitting, particularly in the D-tree model. 
+I also explored Polynomial Feature combinations to give the model more expressive power. The summary is that polynomial combination of degree 2 outperformed the raw data, and polynomial combinations of degree 3 showed some signs of over-fitting, particularly in the D-tree model. 
 
 
 ## Evaluation
@@ -66,6 +66,12 @@ Here is a chart
 
 
 ## Conclusion
+- The best trade off in Model Performance was the Degree = 2 PolynomialFeatures without clustering labels applied. This model had a Mean Recall from 5-Fold CV of 0.9623. This number would likely need to be improved in order to
+- Logistic Regression performed just as well in Recall department, but slightly worse in accuracy. However, Logistic Regression is a much easier to interpret model, gicing us clear feature scores. It's very clear from the top 10 feature values on display above that texture_worst is the most important singular feature. If interperitability were a key goal, Logistic Regression Model would be superios. 
 
 ## Possible Continuations
+- I was surprised and disappointed that I was unable to use clustering to improve the model performance. Theoretically this should be possible. Additional experimentation with hyper parameters, as well as potentially reducing the dimensionality could yield valuable results 
+- The biggest flaw in this dataset was simply its size. With targets of recall so high for the realworld application, It's hard to imaging exceeding 99% accuracy without a larger dataset.
+- Ensemble Techniques like XGBoost, Gradient Boosting Machines, or Random Forest might help with further reducing False Negatives
+- Expanding the ParamGrid to search a broader space for potentially more optimal hyper-perameters. 
 
